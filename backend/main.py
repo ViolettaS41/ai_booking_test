@@ -1,4 +1,3 @@
-from re import S
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from ai_api import get_ai_response
@@ -17,6 +16,11 @@ app.add_middleware(
     allow_methods = ['*'],
     allow_headers = ['*']
 )
+
+#test api deploy
+@app.get("/")
+def root():
+    return {"status": "backend works"}
 
 @app.post('/message')
 def message(data: UserMessage):

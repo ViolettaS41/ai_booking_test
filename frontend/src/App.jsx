@@ -9,7 +9,7 @@ function App() {
   const MessageAI = async (e)=>{
     e.preventDefault()
 
-    const  response = await fetch("/api/message",
+    const  response = await fetch("https://ai-booking-test.onrender.com/message",
       {
         "method": 'POST',
         "headers": {
